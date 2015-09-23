@@ -9,6 +9,14 @@ include RandomData
 end
 posts = Post.all
 
+# Create a Unique Post
+1.times do
+  Post.find_or_create_by!(
+    title: "A Unique Post",
+    body: "This is the body for a unique post. If the post is already in the database it will find. If it doesn't find an existing post it will create one."
+  )
+end
+
 # Create Comments
 100.times do
   Comment.create!(
