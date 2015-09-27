@@ -12,7 +12,7 @@ module RandomData
     strings = []
     rand(3..8).times do
       strings << random_word
-    end
+  end
 
     sentence = strings.join(" ")
     sentence.capitalize << "."
@@ -22,5 +22,9 @@ module RandomData
     letters = ('a'..'z').to_a
     letters.shuffle!
     letters[0,rand(3..8)].join
+  end
+
+  def random_price
+    rand(5..100)
   end
 end
